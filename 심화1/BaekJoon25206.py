@@ -37,7 +37,17 @@ P/F 과목의 경우 등급이 P또는 F로 표시되는데, 등급이 P인 과�
 등급은 A+,A0,B+,B0,C+,C0,D+,D0,F,P중 하나이다.
 적어도 한 과목은 등급이 P가 아님이 보장된다."""
 
-for i in range(2):
-    globals()["s{}".format(i)] = i
+rating = ['A+','A0','B+','B0','C+','C0','D+','D0','F']
+grade = [4.5,4.0,3.5,3.0,2.5,2.0,1.5,1.0,0]
 
-print(s1)
+total = 0
+result = 0
+
+for _ in range(20):
+    c,g,r = input().split()
+    g = float(g)
+    if r != 'P':
+        total += g # 총 학점
+        result += g * grade[rating.index(r)] # 학점 * 점수
+
+print('%.6f' % (result/total))
