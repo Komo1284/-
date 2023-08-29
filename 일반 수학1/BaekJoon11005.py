@@ -12,9 +12,9 @@ A: 10, B: 11, ..., F: 15, ..., Y: 34, Z: 35
 출력
 첫째 줄에 10진법 수 N을 B진법으로 출력한다."""
 
+"""
 word = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 n, b = map(int, input().split())
-x = 0
 y = 0
 result = []
 
@@ -26,5 +26,14 @@ while n >= y :
 result = result[::-1]
 for i in range(len(result)):
     print(result[i],end="")
+"""
 
-    
+N, B = map(int, input().split())
+s = ''
+arr = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+while N:
+    s += str(arr[N%B])
+    N //= B
+
+print(s[::-1])

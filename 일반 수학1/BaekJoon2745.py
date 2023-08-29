@@ -18,7 +18,7 @@ N,b = input().split()
 N = N[::-1]
 
 result = 0
-for i,n in enumerate(N):
+for i,n in enumerate(N): 
     result += (word.index(N[i])) * (int(b)**i)
 
 print(result)

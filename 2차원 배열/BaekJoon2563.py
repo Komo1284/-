@@ -21,7 +21,7 @@
 
 paper = [[0 for _ in range(101)]for _ in range(101)]
 
-n=int(input())
+n = int(input())
 for _ in range(n):
     x,y = map(int, input().split())
     for i in range(10):
@@ -29,7 +29,7 @@ for _ in range(n):
             paper[x+i+1][y+j+1] = 1
 
 result = 0
-
 for i in paper:
     result += i.count(1)
+    
 print(result)
