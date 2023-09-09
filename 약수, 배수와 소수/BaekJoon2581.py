@@ -22,9 +22,9 @@ arr = []
 for num in range(m,n+1):
     error = 0
     if num > 1 :
-        for i in range(2, num):  # 2부터 n-1까지
+        for i in range(2, num): 
             if num % i == 0:
-                error += 1  # 2부터 n-1까지 나눈 몫이 0이면 error가 증가
+                error += 1  
         if error == 0:
             arr.append(num)
 

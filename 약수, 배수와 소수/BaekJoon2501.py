@@ -31,4 +31,4 @@ for i in range(n):
 if k > len(result) :
     print(0)
 else:
-    print(result.index(k)+1)
+    print(result[k-1])
